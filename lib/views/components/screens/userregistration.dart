@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:healthapp/views/components/screens/health_checkup.dart';
+import 'package:healthapp/views/components/screens/service.dart';
 
 import '../../../client registration.dart';
 
@@ -153,8 +155,46 @@ class UserRegisterScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'choose services,',
+                        style: TextStyle(fontSize: 15, color: Colors.black),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Get.to(ServiceOptions());
+                        },
+                        child: const Text(
+                          ' click here',
+                          style: TextStyle(fontSize: 15, color: Colors.blue),
+                        ),
+                      ),
+                      SizedBox(width:30),
+                       Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children:[
+                      
+                             
+                            
+                            
+                            InkWell(
+                               onTap: () {
+                               Get.to(const HealthCheckup());
+                                },
+                               child: const Text(
+                                ' Route to checkup page',
+                                style:TextStyle(fontSize: 15, color:Colors.blue),
+                                                       ),
+                             ),
+                    ],
+                  ),
                 ]),
-          )),
-        ));
+          ])),
+        )));
   }
 }

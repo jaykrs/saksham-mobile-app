@@ -63,14 +63,15 @@ class ClientRegisterScreen extends StatelessWidget {
                            const SizedBox(
                             height:35,
                           ),
-                          Center(
-                            child: ElevatedButton(
+                           Container(
+                          alignment: Alignment.centerRight,
+                         child: OutlinedButton(
                            child: const Text('Send OTP'),
                                    onPressed: () {
                                   print('Pressed');
                              },
                        ),
-                     ),
+                         ),
                           const SizedBox(
                           height:30,
                         ),
@@ -101,6 +102,7 @@ class ClientRegisterScreen extends StatelessWidget {
                         const SizedBox(
                           height: 25,
                         ),
+                         
             
                           const SizedBox(height:30),
                    TextFormField(
@@ -114,9 +116,19 @@ class ClientRegisterScreen extends StatelessWidget {
                                 RequiredValidator(errorText: 'Required*')
                               ]
                             ),
+                            
             
                   
                           ),
+                          Container(
+                          alignment: Alignment.centerRight,
+                         child: OutlinedButton(
+                           child: const Text('Enter age'),
+                                   onPressed: () {
+                                  print('Pressed');
+                             },
+                       ),
+                         ),
                           const SizedBox(
                           height:30,
                         ),
@@ -162,10 +174,27 @@ class ClientRegisterScreen extends StatelessWidget {
                             ),
                             
                   
-                          ),
-                           const SizedBox(
+                          ) ,
+                          const SizedBox(
                             height:35,
                           ),
+                          const Text(
+                      'Capture Location',
+                      style: TextStyle(fontSize: 20,color: Colors.black
+                    ),
+                  ),
+                  Center(
+                    child: InkWell(
+                      onTap: (){},
+                      child: Image.asset('assets/images/location.png',
+                      height:75,
+                        width: 145),
+                    ),
+                  ),
+                  const SizedBox(
+                          height: 25,
+                        ),
+
                           Center(
                             child: ElevatedButton(
                            child: const Text('Register client'),

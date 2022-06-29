@@ -130,6 +130,7 @@ class loginScreen extends StatelessWidget {
                                 style:TextStyle(fontSize: 15, color:Colors.blue),
                                                        ),
                              ),
+                              
                       ]),
                 ],
               ),
